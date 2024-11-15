@@ -1,0 +1,63 @@
+.dashboardContainer {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.chartsRow {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.chartBox {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: calc(33.333% - 20px);
+    /* Ensures 3 charts per row */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chartBox h2 {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    color: #333;
+    text-align: center;
+}
+
+@media (max-width: 1200px) {
+    .chartsRow {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .chartBox {
+        width: 300px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .chartsRow {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .chartBox {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
